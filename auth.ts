@@ -14,16 +14,5 @@ export const { handlers, auth, signOut, signIn } = NextAuth({
   session: {
     strategy: "jwt",
   },
-  callbacks: {
-    async session({ session, token }) {
-      if (token) {
-        // @ts-ignore
-        session.user.id = String(token.sub);
-        const groups = await getGroupsByUserId(String(token.sub));
-        session.user.groups = groups;
-      }
-      return session;
-    },
-  },
   ...authConfig,
 });
