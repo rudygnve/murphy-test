@@ -15,11 +15,11 @@ const Page = () => {
   const [emailIsValid, setEmailIsValid] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [data, setData] = useState<SignUpDataProps>({
-    firstname: "Rudy",
-    lastname: "Genave",
-    email: "rudygnve11@gmail.com",
-    password: "RUdy0911#",
-    cpassword: "RUdy0911#",
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+    cpassword: "",
   });
 
   useEffect(() => {
