@@ -7,6 +7,8 @@ import { PrismaClient } from "@prisma/client";
 import authConfig from "./auth.config";
 import { getGroupsByUserId } from "./lib/getGroupsByUserId";
 
+const prisma = new PrismaClient();
+
 export const { handlers, auth, signOut, signIn } = NextAuth({
   adapter: PrismaAdapter(prisma),
   session: {
