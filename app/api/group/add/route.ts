@@ -6,6 +6,7 @@ import { getUserByEmail } from "@/lib/getUserByEmail";
 export async function POST(request: Request) {
   const session = await auth();
   const data = await request.json();
+  console.log(data);
   if (!data) return Response.json({ success: false, message: "Missing data" });
   try {
     const groupDetails = await getGroupDetails(data.url);
