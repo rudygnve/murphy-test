@@ -15,11 +15,11 @@ const Page = () => {
   const [emailIsValid, setEmailIsValid] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [data, setData] = useState<SignUpDataProps>({
-    firstname: "",
-    lastname: "",
-    email: "",
-    password: "",
-    cpassword: "",
+    firstname: "Rudy",
+    lastname: "Genave",
+    email: "rudygnve11@gmail.com",
+    password: "RUdy0911#",
+    cpassword: "RUdy0911#",
   });
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const Page = () => {
   };
 
   return (
-    <main className="w-full min-h-screen h-full flex items-center justify-center">
+    <main className="w-full min-h-screen h-full flex items-center justify-center md:p-0 p-3">
       <div className="w-full h-full max-w-xl mx-auto flex flex-col">
         <div className="w-full flex flex-col gap-3 items-center justify-center text-center mb-5">
           <Link href="/">
@@ -63,7 +63,7 @@ const Page = () => {
           onSubmit={handleSignUpWithCredentials}
           className="w-full flex flex-col gap-5 mb-4"
         >
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="flex flex-col gap-2">
               <Label htmlFor="firstname">Firstname</Label>
               <div className="flex items-center w-full h-12 border rounded-md overflow-hidden">
@@ -141,7 +141,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="w-full grid grid-cols-2 gap-5">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="flex flex-col gap-2">
               <Label htmlFor="password">Password</Label>
               <div className="flex items-center w-full h-12 border rounded-md overflow-hidden">
