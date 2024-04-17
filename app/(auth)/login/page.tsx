@@ -16,8 +16,8 @@ import { FormEvent, useEffect, useState } from "react";
 const Page = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [credentials, setCredentials] = useState<CredentialsProps>({
-    email: "",
-    password: "",
+    email: "rudygnve11@gmail.com",
+    password: "RUdy0911#",
   });
   const [emailIsValid, setEmailIsValid] = useState<boolean>(false);
 
@@ -40,8 +40,8 @@ const Page = () => {
 
   return (
     <main className="w-full min-h-screen h-screen flex items-center justify-center">
-      <div className="w-full h-full grid grid-cols-2">
-        <div className="w-full h-full flex items-center justify-center">
+      <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2">
+        <div className="w-full h-full flex items-center justify-center p-3 md:p-0">
           <div className="w-full max-w-sm mx-auto flex flex-col">
             <div className="flex flex-col mb-6">
               <div className="w-full flex items-center justify-between">
@@ -156,7 +156,7 @@ const Page = () => {
             </form>
           </div>
         </div>
-        <div className="w-full h-full bg-prime"></div>
+        <div className="w-full h-full lg:flex hidden bg-prime"></div>
       </div>
     </main>
   );
