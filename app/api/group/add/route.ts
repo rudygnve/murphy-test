@@ -5,7 +5,6 @@ import { getUserByEmail } from "@/lib/getUserByEmail";
 
 export async function POST(request: Request) {
   const session = await auth();
-  const user = await getUserByEmail(String(session?.user?.email));
   const data = await request.json();
   if (!data) return Response.json({ success: false, message: "Missing data" });
   try {
@@ -13,7 +12,7 @@ export async function POST(request: Request) {
     const addGroup = await prisma.group.create({
       data: {
         groupId: String(data.groupId),
-        userId: String(user?.id),
+        userId: String(session?.user?.id),
         name: String(groupDetails.name),
         image: String(groupDetails.cover),
         uri: String(data.url),
