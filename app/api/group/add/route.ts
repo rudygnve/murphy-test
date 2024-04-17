@@ -1,5 +1,6 @@
 import { auth } from "@/auth";
 import { getGroupDetails } from "@/scraper/groupDetails";
+// import prisma from "@/lib/db";
 import { getUserByEmail } from "@/lib/getUserByEmail";
 import { PrismaClient } from "@prisma/client";
 
