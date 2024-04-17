@@ -1,7 +1,8 @@
 import { auth } from "@/auth";
 import { getGroupDetails } from "@/scraper/groupDetails";
-import prisma from "@/lib/db";
 import { getUserByEmail } from "@/lib/getUserByEmail";
+
+const prisma = new PrismaClient();
 
 export async function POST(request: Request) {
   const session = await auth();
