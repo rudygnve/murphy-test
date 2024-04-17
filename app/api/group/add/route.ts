@@ -1,6 +1,7 @@
 import { auth } from "@/auth";
 import { getGroupDetails } from "@/scraper/groupDetails";
 import { getUserByEmail } from "@/lib/getUserByEmail";
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
