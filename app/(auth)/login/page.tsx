@@ -16,8 +16,8 @@ import { FormEvent, useEffect, useState } from "react";
 const Page = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [credentials, setCredentials] = useState<CredentialsProps>({
-    email: "rudygnve11@gmail.com",
-    password: "RUdy0911#",
+    email: "",
+    password: "",
   });
   const [emailIsValid, setEmailIsValid] = useState<boolean>(false);
 
